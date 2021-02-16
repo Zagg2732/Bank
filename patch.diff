@@ -1,0 +1,407 @@
+From 4058f8b50e3d9f8b7d7778fb45fa60b5f111d9a9 Mon Sep 17 00:00:00 2001
+From: Zagg2732 <zagg2732@gmail.com>
+Date: Tue, 16 Feb 2021 21:23:54 +0900
+Subject: [PATCH] commit
+
+---
+ .idea/.gitignore                              |   3 +
+ .idea/misc.xml                                |   6 ++
+ .idea/modules.xml                             |   8 +++
+ CollectionQuizBank.iml                        |  11 ++++
+ .../CollectionQuizBank/Account.class          | Bin 0 -> 2472 bytes
+ out/production/CollectionQuizBank/Bank.class  | Bin 0 -> 3163 bytes
+ out/production/CollectionQuizBank/Main.class  | Bin 0 -> 1252 bytes
+ .../CollectionQuizBank/Transaction.class      | Bin 0 -> 1268 bytes
+ src/Account.java                              |  53 +++++++++++++++++
+ src/Bank.java                                 |  54 ++++++++++++++++++
+ src/Main.java                                 |  34 +++++++++++
+ src/Transaction.java                          |  28 +++++++++
+ 12 files changed, 197 insertions(+)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 CollectionQuizBank.iml
+ create mode 100644 out/production/CollectionQuizBank/Account.class
+ create mode 100644 out/production/CollectionQuizBank/Bank.class
+ create mode 100644 out/production/CollectionQuizBank/Main.class
+ create mode 100644 out/production/CollectionQuizBank/Transaction.class
+ create mode 100644 src/Account.java
+ create mode 100644 src/Bank.java
+ create mode 100644 src/Main.java
+ create mode 100644 src/Transaction.java
+
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+index 0000000..26d3352
+--- /dev/null
++++ b/.idea/.gitignore
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+index 0000000..91063aa
+--- /dev/null
++++ b/.idea/misc.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" default="true" project-jdk-name="15" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+index 0000000..e1d3440
+--- /dev/null
++++ b/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/CollectionQuizBank.iml" filepath="$PROJECT_DIR$/CollectionQuizBank.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/CollectionQuizBank.iml b/CollectionQuizBank.iml
+new file mode 100644
+index 0000000..c90834f
+--- /dev/null
++++ b/CollectionQuizBank.iml
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/out/production/CollectionQuizBank/Account.class b/out/production/CollectionQuizBank/Account.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..3af8620dad3e721ea46beed068ae5eef3326d98e
+GIT binary patch
+literal 2472
+zcmb7GYfl_i7=F&~!YtG2#VrMUgJ~^gcZ;m|3rpz*tu1aZx(IIT?JzrqDa#D*&bA@O
+z#29LbnAi_(N+Km{jA@Kb+6slV>JRXzu)|+4zGr3@hO#yqvNPxMUY_T9&wGZy{(kr;
+zfHVvlA%rDF6x5-fVcR8snWqZe98R4bx}<A1Lw&bl8g>suIGz}g5M|iz8kKFMkUCZ@
+z@`;R5vSmmJH((PK37Zvc!Bz(8n5J1}lVT`#k((v1*@k777<Oc8L`Vzorxe7nouPqy
+zu4gQUm}l*R%GyQ49Cl52C}<L<5tEPU!uM$fJF$z>4so*8bOzQZVGqNm{<Z8;v=Aj{
+z?&|W=l#Ja_1@V0hP4SIc`Vs?z)-wtYppE$Re4ele4Lyz0iSrF;M_fWeK@x}7$(Wre
+z+4>lHTV)c$XKq-jb40`@IyxUqNAWDfk+!_^-8I#NwsK>}xq93AdZ98sRhj;&Q(l>w
+zbmo4g-RsVcADmlXsH@gh3mGXqC*gSoFW^OnEo+s`SmrRva+w#(`q_(Azj$9Fz*cOh
+zWxR}6B)qENHN0Le@p_n~+qeKt5xRpS_%*o@2wBy|TUsB6*rpjSRGG}Hm0xZ<bJr@j
+zepj6bvs9Lq8{ezW)Qsxf{Ax`ApSjxQ5%2JAo$1-ix0B>Vs#N#nC=QDnyTPJ3vL>w`
+z{(nmwqh2|t;5d32n#cI4-fNi}w+9V-ghnNsn>L;5Gc`mBXyVJ%=Pj-8o^-Gtz9BV1
+z))+RqT`tm5K2Xc8I}<qB=^m1`{Xbzy3{czjT6v1QHDj3iney0>UhL;X1zL$^ER7ci
+zc+n7Ze=%Z@7(}rl<F_=Wl81Hsc(v2$Zs?<6v=l%@4$X0&*<*Ye4%Xh;NJ+};<5tO_
+z=84d`CFJ#d%)3>hSEvB_BEQ10Icsxm^fVv$@kVXSlaZmZnkaaI5d5rFE^7J-LvU7n
+zTAiY4sC|!HmR+JdYy7lsk68KA)_Qy(<3oHT;bU<QKB0oF^_O8@wnp`om(V*JC+M!T
+ziW3Yo!GidPUeJ@=%op_1fsAF1mdDc@PfB2Aon!yRxL(8j-}}!c?uY2*g+kV_b?U+)
+zhMwi$CY>L@sobAhnORZ~tL?0vI_uVa<>$%OnS0}?hgpZZeD7{$Zl?0(ymRvoEqpGM
+zaHmXDFZLFAsic=Akd$p3bg4yG0^LY0Pd24Wd)i<h-R>dk!3aI+^FX7Jxcl8VUHR^t
+zzBpib!yUhgdK%Z^1U=uPl}{0-KcF?a2$p;VDYuA*1<1)m3)q(ISU_Wvrp@<U=acl@
+zMFBubBZyL11&!ED-<B<Cq1h?gQN3{J!`n2Yz%DH2js&m}CC=cqpFZWzfx6^8n(vTN
+z2qKBV2r?D{6?a_c2c)|MXUR%nPtlIB6VCEo8U&r2YdCunoFk`q@Gd<?kk7=|ncis;
+z<Pmn~VtZQ`(fR=U2a`Dh)yj$feH@H+)ct`_F5J3=&TK9s@QTp`yfnBbPK;y$_7LU0
+z^lU*F(H9(=2%7kxqAE%nSrSs9?_UM7<O9(}=+^7A*e|knd0DIJauGMbn{^d%_j<s(
+z54h)vfWxlPEtC}W4R1gjeWnj0PJdlU&|yhp2!{gTwN>z%5B@#!41>jq#Q+9<IgirW
+z5;bWebld3HD3A-J4{;QDyhy1)k(&GjVZ2ZNA>?qL-cgEnfqons&14$oaS<cf`48#N
+Bo7w;X
+
+literal 0
+HcmV?d00001
+
+diff --git a/out/production/CollectionQuizBank/Bank.class b/out/production/CollectionQuizBank/Bank.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..f70f2afb3c44497b6397efe0b3fa014025251ba5
+GIT binary patch
+literal 3163
+zcma)9TXz#x6#h;VI&By%l+wyQV3DRR6bcFwKxpMs2n8(^3tkw~p$$!DN-{y}6%`c(
+z?}FulwOGFJ;sbIi0!tUqF5i6gA4vHFE)~B$Gf5^;)Q6dzv(G+zf8XBw>@)fK?^{0s
+zh~t|GDiG2T)-ef{3R4doM~$|$VGXqHJb2hlItrC*Q&!4ZuMldA^=hb6nC>d&om9GQ
+zV>WAyBvLsi0u7;ROopyuijK!nqY&;etRaOeBbl`GmXlMMk(gj>T((WqQH$vcx??*=
+zdZV{PL3L@Ep)jqqZL5(R++hqyQ0Mu3T*pkzBD#z*OlScIzNTw_j*hva6{c3Z?47S8
+ziUkB`T26MP$0X5dO|igkisF;;1R6Cg((xn~D@-Y&a5q$?95ZV;c2=RjY;Tt@r-2xn
+zHMHnx#S(?ul7WJXf;MR6y3Jz*zyR-)9c?<6VL8ECuDGsXJCK&Rh81OrU`QG_36;rc
+z$5T3<76VlSrqgSr^QMN?Wx4HfvMFmIf>l_fvkKNS%jS{1k(LxSc|iy|6Ikt7uj5&<
+zT1l(h%@GY73Et0?q`y<gb7CrF^!Ha|Gqz~hs-p|r%3Y7-95X{LJ5S1fL8R=qT}0#%
+zmuY0;RY)i-UKhQ0_S)UkH>1B_Ju&|6nY&j`-W&a4{KBX|AHR6^?$vA2brE!9r-ofR
+zp2rJ?n3NkN&S5d1wjSW;#UUQ+jbH<I%Nf{1$H55r8iAMu_Gs9v<3;q54Pzp<yZjOg
+zMo-FZzmAviGWCXq_3EGp@0`U09(>6JrfPX;U)6B{hC)Ne7&1F;D`_};Q_dhqImhr$
+zSvd?Ju*4~;qhEqF$qk1>bx&%*GMs$YREP$Ozj&<ICj11)*T)r>1yuagRZ<8L@I5|q
+zi+c>*5Ea53^b+p0`-!I}k+RJ0eCD8;-EAC9Q&O9-lSaDN$fjiO3&YM}ie+1wkY+=S
+z`k|E7@0+7M77TSEbpaYhrrcVQ87Wqz+ue$Xii=^($ha6D0<RFsjFddqm!ljRE+B0W
+zxGh@#ulP;rag5{;)qT1v|1Y1CVM#-T_31-Ym^-13LJC+FhSz?(ZG}gGekcfKbuzi+
+zjVWj-^sn+8gQylxyz&5awv!_C8d~06c0;gfc9CC?ozEuC%_*sqYAJ=K0+F4k!?vBA
+zlQo8Sn9iWxpR1|FM-iOFDGeXXNjk02SYng1j@m<Jn^!2_;o58@+2UClqrtHGik{J}
+zhSi@obBzhx9?A~~k8+{DAM)UB+|BBkKz)DUEKSf1eBYf$I^Dx7i0$$db}heIj$b%_
+z@7yVAlj9dpj9<CtcgyJb$<gSVsEY7}bXk^}?MxfFoSD<`dD+FrN@II)ZxRh(DJ*&f
+z@^Z==&MM6NcU3u~ZhWwS_k9IBS(tBrC_usFtOAGl@FRd@$emu44{*-gyEq?2CCB_;
+z;XB1O6CsX(mgXB!&9|ZT-9YtqM4Cg_F_rT=&g-wEp){QRJ=H64nD2TT0-rF=)$kUp
+zLj>~)aEMafGmA7boGDnaxl3IB#$Vaj?R(qNd<_j_n0FHk6}p$)M3cgKEazaU!X31)
+z3C|4Q#7Y^jY8k^b=TX}#l64~4Four3m+t@4dYKl(E~;5X0|uuG)A&J9i!}^O7iJ(q
+zyn?KmdNF>%4C4q##NlI<Q5HF3t>O*rkWmHlT(9S^r+<|C-kOB_HLlel^cQAm&@{wW
+z{6V3Yjbk)2g4g*L!aq_jj<#IErrPae5W=$ygm<+1gqu0=2uloHaz5QDoV)ZlT)uSw
+zSM?y%S;RCOO_+n#Omzn{u!-!1X_U!rV)BJ)NB|U>ZowNaQ{g9>^0eNhmax(h`cqiN
+zT7{CrTX>tlLZyu}DVIs45D_3=AxJd=je*2Z@?ClHc!%r9v4?LlGRpJ|oNZ#{Ha7IN
+zwBA6EBvJy?B2qq6$IyF6^1DyO4dv2SSKLRf@BtR;gC!Yb>RU*vm0w*;nEa*1aL{Wp
+z2;2N1h)fbMRNuvWKFSVv4%9Jg0_PT90mg7p#@`j0%YOi1ISZjZz`oA+5yJbf<_Ubj
+d-zr-Ekk1)>%2_RUw&OE=QCW>I@ioq2=0A@29TETl
+
+literal 0
+HcmV?d00001
+
+diff --git a/out/production/CollectionQuizBank/Main.class b/out/production/CollectionQuizBank/Main.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..77092afb961d5063db6d24811d0bee86f30be131
+GIT binary patch
+literal 1252
+zcmZuw+fEZv6kS87?X-@dLqRK|cyB4tT8p<La`6V1i@{Wl@nI-q9i4VeJJs-Fh>6kY
+zi!UaUs4>O|V|>wQi5mR?KSkgdjO%o&LZnI0*?X_O*V%iWGe3TP`3@kBb3rt~<A<!m
+z3!j7y*Y#U^+|rBr_{8*eBj-r)^_fM}>6hS%M6-S<667Jhcq0fuJPOv)O(YWg6|9#K
+zSbF|(>EY+4*K-1GQn3LWB?R@EnZaDnt`y0(FOvCp#FSGqi~02bk!V&yv&)=R(BfJL
+z6l`*>l!7o%`}uip@$J3k`KJonT%cE++pc08wo7Qr8_s##(XGFSbAl0(u|vg9?2@2f
+zHH&{*D@%y3(OcAQuHu+he6Uo~XESEmNe8e8d;Qp_B7*2D)uv|4j!~dkc7@ZnxYec|
+zpX8(t=QZ>~I*1s${ODHEgSdp|njoulB=~QN3adzxm2J7Vl8$D@9Q#!yaexYQ(!WEt
+zuS~Bi9L?0>w1VFHJw14~^ysC6Lp9}+6!(Y#9=%(9F}M8Wqk^;mQYiw*T!0t>KaLX^
+z(@l0J58E>ah0d5oW4uzBHcIF9X^RmpW9M`$tCvjS*MqWi&7{h{j3^fDg&Ij~<nme%
+zfVf`DGrxHaSc3PqZI?{JCLW_;bBr<-*H&=VwPLcsl1$E5ZWKi0!6~~^${D9j(QH8U
+z(<3ecJJ8SXLHruPGWfU-(2H}IxO+PnAib}_gIom+{)f1#ZUTmJf?fb8af*=v!WKNF
+z0=|ER|Iz{inV1&T)G8WdnpWRK^}SWwT#IjU_bRqthzY1;>;rapRnZv}K*u<}ZhG8e
+zTBwQy?K=5UIV_8^u*^eJB%`7IXN3Ml4r+(poTFM_%@DPuWfhA%$V*E!aN*z7)7Z>u
+zJWwF>1NYMNp@Xk6!bk!^^kN<QsK+qYV-$@z$E+*Ra1|j~Xh8+7xPwi&&&tOLV;)=Z
+z3T=3Ut@wm?e8cvdqA6E3oW>cRr=W@v@=4^ri?hh^ibmmJjFyMo7cov>CO*OJ22B12
+DuP_pf
+
+literal 0
+HcmV?d00001
+
+diff --git a/out/production/CollectionQuizBank/Transaction.class b/out/production/CollectionQuizBank/Transaction.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..b6596fd329b7963c9a21198dab4a348cf168f107
+GIT binary patch
+literal 1268
+zcma)5&rcIU6#k|_x0Hp}iXfo4C`u_v{e=nz4?>7GRSyt2c$&5oSlI58-6;t%UI+&h
+zuNpZZ!IKwFAhv3V@elA%f&LA~x4TtpN{ok@_ha7s-kWdU{P=nB9Y6|`VFb{ipixB=
+zf(+4RzQ&UVHy4vnvdbbT8G;kKsmpr|4e`Nw1tEr*7gUtGk(}a&F!S6FA<Pgy+SskU
+z-`2*p(PpS<RnVp)f+$1FoXt&#=cI0#3=w&3O>-#-F>_pZR@%C`m<l0Ah?SSyhkKiZ
+zIOZa@t2pDr#TJFEL7dYI!aeR(an?O<T+z+E>*!X|gL8BRUa*QL-G!xHcdv>Iu3O1+
+zx@k_th>AWH7jcQ9v%puxlx60)T+rnbX^!NkbQm)6`X>L!lTHuThcR@V0GA$|r|ze$
+zJW&$K=%#pFEM$c}$Fqh<l9l7eJhye%t~wj#l1|OFW@`9IF@&V$^T^O1Ke2vz)+*XL
+zF{8WC(VFZL_bJGA-?F4bFSYte$R#W9M1r^$#&z6KaMLC07DNB>tLf&NwIY&!QJ=pV
+zdT+~KXV|K}YBkUYeZbAUA)Nk<WvvufQ}sO6c>YS9TVE9?gg>o`_vbfNd-*B^4XrV&
+zOF=Vsn_=N_fA45#>u94?dGk?w=3AAw-?T|>fDH_5Rfj)_zkTHoN1r$UM0|ZwdHs$o
+zHmp^4ULAhg)h5|<2KAw73VX`njw2ieV+@z;2s?=f1@wZw{|=?0_DMq@O>}@JxQTZ9
+zY@`L;U*bvn4xXf6;7J;LPcn+`2lYc%0S#y**^~GJmWVZ%(UORrD&urwsEm$;Rz}yp
+zmvn{pZUkv>p#&9Sv=V$96^oERiUB&&2#lZ*#~?{pb6a4Z<~9)^J%OQW>1in5S$CpD
+zMN3q&L={WuqILd&z_3S|0l1ZeUSzvhMfJ0)RT?ntMP0=R$q=0-X^r9zSz*%dVjL6b
+F`UNvIM^FF&
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/Account.java b/src/Account.java
+new file mode 100644
+index 0000000..9dd5596
+--- /dev/null
++++ b/src/Account.java
+@@ -0,0 +1,53 @@
++import java.util.ArrayList;
++import java.util.HashMap;
++
++public class Account {
++    private String accountNo;
++    private String name;
++    private long balance;
++    private ArrayList<Transaction> transactions = new ArrayList<Transaction>(); //거래내역
++
++
++    public Account(String accountNo, String name) {
++        this.accountNo = accountNo;
++        this.name = name;
++        this.balance = 0;
++    }
++
++    //잔고return
++    public long getBalance() {
++        return balance;
++    }
++
++    public ArrayList<Transaction> getTransactions() {
++        return transactions;
++    }
++
++    //입금기능. 입출금시 Transaction 리스트에 기록이 들어가야함
++    public void deposit(long amount) {
++        transactions.add(new Transaction("입금", amount));
++        this.balance += amount;
++        System.out.printf("%d원 입금하셨습니다.\n현재 잔액은 %d원 입니다.\n", amount, balance);
++    }
++
++    //출금기능. 입출금시 Transaction 리스트에 기록이 들어가야함
++    public void withdraw(long amount) {
++        //잔액보다 많이 출금할경우 출금막음
++        if (this.balance < amount) {
++            System.out.printf("잔액이 모자라 출금할 수 없습니다. 잔액 : %d원, 출금시도금액 : %d원\n", balance, amount);
++            return;
++        }
++        transactions.add(new Transaction("출금", amount));
++        this.balance -= amount;
++        System.out.printf("%d원 출금하셨습니다.\n현재 잔액은 %d원 입니다.\n", amount, balance);
++    }
++
++    @Override
++    public String toString() {
++        return "계좌번호 = '" + accountNo + '\'' +
++                ", 이름 = '" + name + '\'' +
++                ", 잔액 =" + balance +
++                ", 거래내역 =" + transactions +
++                "}" + "\n";
++    }
++}
+diff --git a/src/Bank.java b/src/Bank.java
+new file mode 100644
+index 0000000..b60b713
+--- /dev/null
++++ b/src/Bank.java
+@@ -0,0 +1,54 @@
++import java.util.ArrayList;
++import java.util.HashMap;
++import java.util.Map;
++
++public class Bank {
++    private ArrayList<Account> accounts = new ArrayList<Account>();
++    private int totalAccount = 0;
++
++    //HashMap 활용
++    HashMap<Account, String> map = new HashMap<Account, String>();
++    HashMap<String , Account> map2 = new HashMap<String, Account>();
++
++    public ArrayList<Account> findAccounts(String name) {
++        ArrayList<Account> myAccounts = new ArrayList<Account>();
++            //key가 이름이라 이에 해당하는 value값이 여러개일경우 다 반환해야하기 때문에 배열을 써야한다.
++            //key로 get하면 Account가 value로 온다.
++        for(Map.Entry<Account, String> my : map.entrySet()) {
++            if (my.getValue().equals(name)) {
++                myAccounts.add(my.getKey());
++            }
++        }
++        return myAccounts;
++    }
++
++    public Account getAccount(String accountNo) {
++        System.out.println("= 해당 계좌번호의 계좌정보 =");
++        for(Map.Entry<String, Account> my : map2.entrySet()) {
++            if (my.getKey().equals(accountNo)) {
++                return my.getValue();
++            }
++        }
++        return null;
++    }
++
++    public ArrayList<Account> getAccounts() {
++        return accounts;
++    }
++
++
++    public void addAccount(String accountNo, String name) {
++        accounts.add(new Account(accountNo, name));
++        //HashMap에 계좌번호와 value(Account)주소를 지정한후에 totalAccount 증가
++        map2.put(accountNo, accounts.get(totalAccount));
++        map.put(accounts.get(totalAccount), name);
++        totalAccount++;
++    }
++
++    public int getTotalAccount() {
++        System.out.print("해당 은행의 전체 계좌 수 : " + totalAccount + "\n");
++        return totalAccount;
++    }
++
++
++}
+diff --git a/src/Main.java b/src/Main.java
+new file mode 100644
+index 0000000..45003a4
+--- /dev/null
++++ b/src/Main.java
+@@ -0,0 +1,34 @@
++//http://www.java-school.net/java/Javabank-Requirements-analysis#comments
++
++public class Main {
++    public static void main(String[] args) {
++        Bank woori = new Bank();
++        woori.addAccount("0001", "이승준");
++        woori.addAccount("0002", "이승준");
++        woori.addAccount("0003", "이승준");
++        woori.addAccount("0004", "김명환");
++        woori.addAccount("0005", "김명환");
++
++        woori.getTotalAccount();
++        Object test = woori.findAccounts("이승준");
++        System.out.println(test);
++        Object test2 = woori.findAccounts("김명환");
++        System.out.println(test2);
++
++        System.out.println(woori.getAccount("0003"));
++
++        Bank gukmin = new Bank();
++
++        gukmin.getTotalAccount();
++        gukmin.addAccount("0001", "이순신");
++        gukmin.addAccount("0002", "이순신");
++        gukmin.addAccount("0002", "이순신");
++        gukmin.addAccount("0003", "이순신");
++        gukmin.addAccount("0023", "심란해");
++        gukmin.addAccount("0443", "심심해");
++        gukmin.getTotalAccount();
++        System.out.println(gukmin.findAccounts("이순신"));
++        gukmin.findAccounts("이승준");
++
++    }
++}
+diff --git a/src/Transaction.java b/src/Transaction.java
+new file mode 100644
+index 0000000..6631b9d
+--- /dev/null
++++ b/src/Transaction.java
+@@ -0,0 +1,28 @@
++import java.util.Calendar;
++
++public class Transaction {
++    private String transactionDate;
++    private String getTransactionTime;
++    private String kind;
++    private long amount;
++    private long balance;
++
++    //거래내역
++    public Transaction(String kind, long amount) {
++        this.transactionDate = "날짜 : " + Calendar.DATE;
++        this.getTransactionTime = "시간 : " + Calendar.AM_PM;
++        this.kind = kind;
++        this.amount = amount;
++    }
++
++    @Override
++    public String toString() {
++        return "거래내역 {" +
++                "거래일 = '" + transactionDate + '\'' +
++                ", 거래시간 = '" + getTransactionTime + '\'' +
++                ", 구분 = '" + kind + '\'' +
++                ", 금액 = " + amount +
++                ", 잔고 =" + balance +
++                '}';
++    }
++}
+-- 
+2.30.0.windows.2
+
