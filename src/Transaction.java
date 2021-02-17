@@ -9,15 +9,11 @@ public class Transaction {
     private long balance;
 
     //거래내역
-    public Transaction(String kind, long amount) {
+    public Transaction(String kind, long amount, long balance) {
 
-    	/*
-        this.transactionDate = "날짜 : " + Calendar.DATE;
-        this.getTransactionTime = "시간 : " + Calendar.AM_PM;
-         */
         this.kind = kind;
         this.amount = amount;
-        this.balance = 0;
+        this.balance = balance;
     }
 
     @Override

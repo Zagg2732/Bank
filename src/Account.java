@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Account {
     private String accountNo;
@@ -21,13 +20,13 @@ public class Account {
     }
 
     public ArrayList<Transaction> getTransactions() {
-        return transactions;
+        return this.transactions;
     }
 
     //입금기능. 입출금시 Transaction 리스트에 기록이 들어가야함
     public void deposit(long amount) {
-        transactions.add(new Transaction("입금", amount));
         this.balance += amount;
+        transactions.add(new Transaction("입금", amount, balance));
         System.out.printf("%d원 입금하셨습니다.\n현재 잔액은 %d원 입니다.\n", amount, balance);
     }
 
@@ -38,8 +37,8 @@ public class Account {
             System.out.printf("잔액이 모자라 출금할 수 없습니다. 잔액 : %d원, 출금시도금액 : %d원\n", balance, amount);
             return;
         }
-        transactions.add(new Transaction("출금", amount));
         this.balance -= amount;
+        transactions.add(new Transaction("출금", amount, balance));
         System.out.printf("%d원 인출하셨습니다.\n현재 잔액은 %d원 입니다.\n", amount, balance);
     }
 
