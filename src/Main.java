@@ -1,45 +1,43 @@
 //http://www.java-school.net/java/Javabank-Requirements-analysis#comments
+/*
+= 해당 계좌번호의 계좌정보 =
+[계좌번호 :890113, 소유자 명 : 택, 잔액 : 400000]
+
+5500원 인출하셨습니다.
+현재 잔액은 394500원 입니다.
+
+= 해당 계좌번호의 계좌정보 =
+[계좌번호 :890113, 소유자 명 : 택, 잔액 : 394500]
+
+= 거래 내역 =
+[거래금액:200000, 잔액:200000원 /2020년08월26일11시53분]
+[거래금액:200000, 잔액:400000원 /2020년08월26일11시53분]
+[거래금액:5500, 잔액:394500원 /2020년08월26일11시53분]
+
+ */
 
 public class Main {
     public static void main(String[] args) {
         Bank woori = new Bank();
 
-        woori.addAccount("0001", "이승준");
-        woori.addAccount("0002", "이승준");
-        woori.addAccount("0003", "이승준");
-        woori.addAccount("0004", "김명환");
-        woori.addAccount("0005", "김명환");
+        woori.addAccount("10071", "백");
+        woori.addAccount("890113", "택");
+        woori.addAccount("0113", "택");
+        woori.addAccount("987654321", "두팔");
 
-        //입출금 테스트
-        woori.getAccount("0001").deposit(2000);
-        woori.getAccount("0001").withdraw(1000);
-        woori.getAccount("0001").withdraw(4000);
-
-
-        //모든 계좌 조회
         System.out.println(woori.getAccounts());
+        System.out.println(woori.getAccount("890113"));
 
-        woori.getTotalAccount();
-        System.out.println(woori.findAccounts("이승준"));
-        System.out.println(woori.findAccounts("이준"));
-        System.out.println(woori.findAccounts("김명환"));
+        woori.getAccount("890113").deposit(200000);
+        woori.getAccount("890113").deposit(200000);
 
+        System.out.println(woori.getAccount("890113"));
 
-        System.out.println(woori.getAccount("0003"));
+        System.out.println(woori.findAccounts("택"));
+        woori.getAccount("890113");
+        woori.getAccount("890113").withdraw(5500);
 
-        Bank gukmin = new Bank();
-
-        gukmin.getTotalAccount(); //0
-        //계좌만들기
-        gukmin.addAccount("0001", "이순신");
-        gukmin.addAccount("0002", "이순신");
-        gukmin.addAccount("0002", "이순신");
-        gukmin.addAccount("0003", "이순신");
-        gukmin.addAccount("0023", "심란해");
-        gukmin.addAccount("0443", "심심해");
-        gukmin.getTotalAccount();
-        System.out.println(gukmin.findAccounts("이순신"));
-        gukmin.findAccounts("이승준");
+        System.out.println(woori.getAccount("890113").getTransactions());
 
     }
 }

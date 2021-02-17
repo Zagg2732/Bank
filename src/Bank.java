@@ -32,6 +32,7 @@ public class Bank {
     public Account getAccount(String accountNo) {
         for(Map.Entry<String, Account> my : map2.entrySet()) {
             if (my.getKey().equals(accountNo)) {
+                System.out.println("= 해당 계좌번호의 계좌정보 =");
                 return my.getValue();
             }
         }

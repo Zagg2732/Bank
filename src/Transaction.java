@@ -24,6 +24,6 @@ public class Transaction {
                 ", 구분 = '" + kind + '\'' +
                 ", 금액 = " + amount +
                 ", 잔고 =" + balance +
-                '}';
+                '\n';
     }
 }

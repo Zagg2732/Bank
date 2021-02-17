@@ -39,7 +39,7 @@ public class Account {
         }
         transactions.add(new Transaction("출금", amount));
         this.balance -= amount;
-        System.out.printf("%d원 출금하셨습니다.\n현재 잔액은 %d원 입니다.\n", amount, balance);
+        System.out.printf("%d원 인출하셨습니다.\n현재 잔액은 %d원 입니다.\n", amount, balance);
     }
 
     @Override
