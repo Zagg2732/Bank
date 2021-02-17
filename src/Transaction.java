@@ -1,4 +1,5 @@
-import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Transaction {
     private String transactionDate;
@@ -9,8 +10,11 @@ public class Transaction {
 
     //거래내역
     public Transaction(String kind, long amount) {
+
+    	/*
         this.transactionDate = "날짜 : " + Calendar.DATE;
         this.getTransactionTime = "시간 : " + Calendar.AM_PM;
+         */
         this.kind = kind;
         this.amount = amount;
         this.balance = 0;
@@ -18,12 +22,11 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "거래내역 {" +
-                "거래일 = '" + transactionDate + '\'' +
-                ", 거래시간 = '" + getTransactionTime + '\'' +
-                ", 구분 = '" + kind + '\'' +
-                ", 금액 = " + amount +
-                ", 잔고 =" + balance +
-                '\n';
+
+        Date histroy = new Date();
+        SimpleDateFormat transactionHistory = new SimpleDateFormat("yyyy년 MMMdd일 HH시 MM분");
+        this.transactionDate = transactionHistory.format(histroy);
+
+        return "거래 금액:"+amount+", 잔액:"+this.balance+"원/"+transactionDate;
     }
 }
