@@ -34,7 +34,7 @@ public class Main {
         System.out.println();
         System.out.println(woori.getAccount("890113"));
 
-        System.out.println(woori.getAccount("890113").getTransactions());
+        woori.getAccount("890113").getTransactions();
 
     }
 }

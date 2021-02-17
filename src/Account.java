@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Account {
     private String accountNo;
@@ -19,8 +20,12 @@ public class Account {
         return balance;
     }
 
-    public ArrayList<Transaction> getTransactions() {
-        return this.transactions;
+    public void getTransactions() {
+        Iterator it = transactions.iterator();
+        while(it.hasNext()) {
+            System.out.println(it.next());
+        }
+
     }
 
     //입금기능. 입출금시 Transaction 리스트에 기록이 들어가야함

@@ -4,22 +4,21 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class Bank {
-    //수정!!
-    private ArrayList<Account> accounts;
-    private int totalAccount = 0;
+    private ArrayList<Account> accounts; //계좌를 담을 배열
+    private int totalAccount = 0;   //총 계좌수
 
-    Bank() {
+    Bank() {    //Bank가 생성될때
         this.accounts = new ArrayList<Account>();
     }
 
     //HashMap 활용
-    HashMap<Account, String> map = new HashMap<Account, String>();
-    HashMap<String , Account> map2 = new HashMap<String, Account>();
+    HashMap<Account, String> map = new HashMap<Account, String>();  //계좌가 key이고 이름이 value인 HashMap 생성
+    HashMap<String , Account> map2 = new HashMap<String, Account>(); //이름이 key이고 계좌가 value인 HashMap 생성
 
     public ArrayList<Account> findAccounts(String name) {
-        if (map.containsValue(name)) {
+        if (map.containsValue(name)) {  //만약 파라미터로 받은 name이 HashMap 의 value에 속하면
             System.out.println("= 해당 소유자명의 계좌정보 =");
-            ArrayList<Account> myAccounts = new ArrayList<Account>();
+            ArrayList<Account> myAccounts = new ArrayList<Account>();   //해당되는 Account를 넣을 배열
             //key가 이름이라 이에 해당하는 value값이 여러개일경우 다 반환해야하기 때문에 배열을 써야한다.
             //key로 get하면 Account가 value로 온다.
             for(Map.Entry<Account, String> my : map.entrySet()) {
