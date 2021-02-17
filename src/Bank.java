@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Bank {
@@ -43,9 +44,14 @@ public class Bank {
         return null;
     }
 
-    public ArrayList<Account> getAccounts() {
+    public void getAccounts() {
         System.out.println("=은행에 등록된 모든 계좌를 조회합니다.=");
-        return accounts;
+
+        Iterator it = accounts.iterator();
+
+        while(it.hasNext()) {
+            System.out.println(it.next());
+        }
     }
 
 

@@ -44,9 +44,9 @@ public class Account {
 
     @Override
     public String toString() {
-        return "계좌번호 = '" + accountNo + '\'' +
+        return "[계좌번호 = '" + accountNo + '\'' +
                 ", 이름 = '" + name + '\'' +
                 ", 잔액 =" + balance +
-                ", 거래내역 =" + transactions + "\n";
+                "]";
     }
 }

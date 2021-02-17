@@ -14,13 +14,13 @@ public class Main {
 
         System.out.println(woori.getAccount("890113"));
         System.out.println();
-        woori.getAccount("890113").deposit(2000000);
+        woori.getAccount("890113").deposit(200000);
         System.out.println();
         System.out.println(woori.getAccount("890113"));
 
 
         System.out.println();
-        woori.getAccount("890113").deposit(2000000);
+        woori.getAccount("890113").deposit(200000);
         System.out.println(woori.getAccount("890113"));
 
         System.out.println();
