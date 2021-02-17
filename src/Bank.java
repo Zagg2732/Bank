@@ -4,8 +4,12 @@ import java.util.Map;
 
 public class Bank {
     //수정!!
-    private ArrayList<Account> accounts = new ArrayList<Account>();//new를 값에서 하지말고 생성자에서 하자
+    private ArrayList<Account> accounts;
     private int totalAccount = 0;
+
+    Bank() {
+        this.accounts = new ArrayList<Account>();
+    }
 
     //HashMap 활용
     HashMap<Account, String> map = new HashMap<Account, String>();

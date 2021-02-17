@@ -5,13 +5,14 @@ public class Account {
     private String accountNo;
     private String name;
     private long balance;
-    private ArrayList<Transaction> transactions = new ArrayList<Transaction>(); //거래내역
+    private ArrayList<Transaction> transactions; //거래내역
 
 
     public Account(String accountNo, String name) {
         this.accountNo = accountNo;
         this.name = name;
         this.balance = 0;
+        this.transactions = new ArrayList<Transaction>();
     }
 
     //잔고return
