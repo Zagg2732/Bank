@@ -13,6 +13,7 @@ public class Transaction {
         this.getTransactionTime = "시간 : " + Calendar.AM_PM;
         this.kind = kind;
         this.amount = amount;
+        this.balance = 0;
     }
 
     @Override

@@ -3,7 +3,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Bank {
-    private ArrayList<Account> accounts = new ArrayList<Account>();
+    //수정!!
+    private ArrayList<Account> accounts = new ArrayList<Account>();//new를 값에서 하지말고 생성자에서 하자
     private int totalAccount = 0;
 
     //HashMap 활용
@@ -27,7 +28,7 @@ public class Bank {
             return null;
         }
     }
-
+    //수정!!  accountNo가 없다면 , 없다고 출력
     public Account getAccount(String accountNo) {
         for(Map.Entry<String, Account> my : map2.entrySet()) {
             if (my.getKey().equals(accountNo)) {
@@ -51,8 +52,7 @@ public class Bank {
         totalAccount++;
     }
 
-    public int getTotalAccount() {
-        System.out.print("해당 은행의 전체 계좌 수 : " + totalAccount + "\n");
+    public int getTotalAccount() { ;
         return totalAccount;
     }
 
